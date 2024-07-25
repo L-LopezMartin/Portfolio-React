@@ -1,17 +1,19 @@
-import { ArrowForwardIcon } from "@chakra-ui/icons"
-import { Image, Flex, Heading, Box, Text } from "@chakra-ui/react"
+import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons"
+import { Image, Flex, Heading, Box, Text, Button } from "@chakra-ui/react"
 
 function ClientReviews(){
     return(
-        <Flex as={'section'}>
-            <Heading>Vea lo que dicen los clientes <ArrowForwardIcon></ArrowForwardIcon></Heading>
+        <Flex as={'section'} direction={"column"} px={"10vw"} w={"100vw"}>
+            <Heading w={"300px"} my={"50px"}>Vea lo que dicen los clientes <ArrowForwardIcon></ArrowForwardIcon></Heading>
             <Flex>
-                <Box>
-                    <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus deserunt maxime repellat nisi? Consequuntur, iusto. A provident doloremque suscipit tempore libero voluptas ullam, fugit illum animi id, esse ut molestias?</Text>
-                    <Text>Mr Makiu</Text>
-                    <Text>Director de Marketing - Holalab</Text>
+                    <Button><ArrowBackIcon></ArrowBackIcon></Button>
+                <Box border={"solid"} borderRadius={"10px"}>
+                    <Text w={"60%"} p={"20px"} pt={"50px"}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus deserunt maxime repellat nisi? Consequuntur, iusto. A provident doloremque suscipit tempore libero voluptas ullam, fugit illum animi id, esse ut molestias?</Text>
+                    <Text pl={"20px"}>Mr Makiu</Text>
+                    <Text pl={"20px"} pb={"10px"}>Director de Marketing - Holalab</Text>
                 </Box>
                 <Image alt="MrMakiu"></Image>
+                    <Button><ArrowForwardIcon></ArrowForwardIcon></Button>
             </Flex>
         </Flex>
     )

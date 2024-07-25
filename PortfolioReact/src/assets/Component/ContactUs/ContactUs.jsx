@@ -3,20 +3,22 @@ import { Divider, Flex, Heading, Text, FormLabel, FormControl, Button, Input } f
 function ContactUs(){
 
     return(
-        <Flex as={'section'}>
-            <Heading>¿Listo para discutir tu proyecto?</Heading>
+        <Flex as={'section'} direction={"column"} alignItems={"center"} w={"100vw"}>
+            <Heading my={"50px"}>¿Listo para discutir tu proyecto?</Heading>
             <Text>CONTÁCTAME</Text>
-            <Divider></Divider>
+            <Divider w={"100px"} borderWidth={"5px"}></Divider>
             <FormControl>
-                <FormLabel>Nombre</FormLabel>
-                <Input placeholder='Tu nombre'></Input>
-                <FormLabel>Email</FormLabel>
-                <Input placeholder='Tu correo electrónico'></Input>
-                <FormLabel>Nombre de empresa</FormLabel>
-                <Input placeholder='Nombre de tu empresa'></Input>
-                <FormLabel>Tu mensaje</FormLabel>
-                <Input placeholder='Tu mensaje a enviar'></Input>
-                <Button>Enviar</Button>
+                <Flex direction={"column"} alignItems={"center"}>
+                    <FormLabel my={"5px"}>Nombre</FormLabel>
+                    <Input w={"200px"} my={"5px"} placeholder='Tu nombre'></Input>
+                    <FormLabel my={"5px"}>Email</FormLabel>
+                    <Input w={"200px"} my={"5px"} placeholder='Tu correo electrónico'></Input>
+                    <FormLabel my={"5px"}>Nombre de empresa</FormLabel>
+                    <Input w={"200px"} my={"5px"} placeholder='Nombre de tu empresa'></Input>
+                    <FormLabel my={"5px"}>Tu mensaje</FormLabel>
+                    <Input w={"200px"} my={"5px"} placeholder='Tu mensaje a enviar'></Input>
+                    <Button w={"100px"} my={"40px"}>Enviar</Button>
+                </Flex>
             </FormControl>
         </Flex>
     )

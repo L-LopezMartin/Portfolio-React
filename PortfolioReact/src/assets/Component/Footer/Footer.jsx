@@ -6,7 +6,7 @@ function Footer(){
         <Flex as={'footer'} direction={'column'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'}>
             <Flex justifyContent={'space-between'} w={"100%"}>
                 <Flex  direction={'column'}>
-                    <Text>Suscríbete al newsletter para estar al tanto de las noticias</Text>
+                    <Text my={"10px"}>Suscríbete al newsletter para estar al tanto de las noticias</Text>
                     <FormControl >
                         <Input placeholder="tu correo electrónico" w={"86%"}></Input>
                         <Button w={"10%"} mx={"2"}> <ArrowForwardIcon></ArrowForwardIcon> </Button>
@@ -18,20 +18,20 @@ function Footer(){
                     </Flex>
                 </Flex>
                 <Flex  direction={'column'}>
-                    <Text>Links útiles</Text>
-                    <Link>Proyectos</Link>
-                    <Link>Servicios</Link>
-                    <Link>Contactos</Link>
-                    <Link>Blog</Link>
+                    <Text my={"10px"}>Links útiles</Text>
+                    <Link my={"5px"}>Proyectos</Link>
+                    <Link my={"5px"}>Servicios</Link>
+                    <Link my={"5px"}>Contactos</Link>
+                    <Link my={"5px"}>Blog</Link>
                 </Flex>
                 <Flex  direction={'column'}>
-                    <Text>Consultas</Text>
-                    <Text>leanejemplo@gmail.com.ar</Text>
-                    <Text>+54 9 261 6887381</Text>
-                    <Text>sky_pe/leandro</Text>
+                    <Text my={"10px"}>Consultas</Text>
+                    <Text my={"5px"}>leanejemplo@gmail.com.ar</Text>
+                    <Text my={"5px"}>+54 9 261 6887381</Text>
+                    <Text my={"5px"}>sky_pe/leandro</Text>
                 </Flex>
             </Flex>
-            <Flex justifyContent={'space-between'} w={"100%"}>
+            <Flex justifyContent={'space-between'} w={"100%"} alignItems={"center"}>
                 <Text>
                     Mostrar todos los servicios
                 </Text>
@@ -46,15 +46,15 @@ function Footer(){
                 </Menu>
             </Flex>
 
-            <Divider my={"20px"}/>
+            <Divider my={"10px"}/>
 
             <Flex justifyContent={'space-between'} w={"100%"}>
                 <Text>© 2024 Allfolio - All right reserved</Text>
                 <Flex>
-                    <Link mx={"10px"} border={"1px"} borderRadius={"100%"} padding={"5px"}><Image alt="Dribble Logo"></Image></Link>
-                    <Link mx={"10px"} border={"1px"} borderRadius={"100%"} padding={"5px"}><Image alt="Instagram Logo"></Image></Link>
-                    <Link mx={"10px"} border={"1px"} borderRadius={"100%"} padding={"5px"}><Image alt="Behance Logo"></Image></Link>
-                    <Link mx={"10px"} border={"1px"} borderRadius={"100%"} padding={"5px"}><Image alt="UpWork Logo"></Image></Link>
+                    <Link w={"30px"} h={"30px"} m={"10px"} border={"2px"} borderRadius={"100%"} padding={"5px"}><Image alt="Dribble Logo"></Image></Link>
+                    <Link w={"30px"} h={"30px"} m={"10px"} border={"2px"} borderRadius={"100%"} padding={"5px"}><Image alt="Instagram Logo"></Image></Link>
+                    <Link w={"30px"} h={"30px"} m={"10px"} border={"2px"} borderRadius={"100%"} padding={"5px"}><Image alt="Behance Logo"></Image></Link>
+                    <Link w={"30px"} h={"30px"} m={"10px"} border={"2px"} borderRadius={"100%"} padding={"5px"}><Image alt="UpWork Logo"></Image></Link>
                 </Flex>
                 <Link>Política de privacidad</Link>
             </Flex>
