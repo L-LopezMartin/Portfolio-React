@@ -35,7 +35,7 @@ function Footer(){
                 <Text>
                     Mostrar todos los servicios
                 </Text>
-                <Menu>
+                <Menu >
                     <MenuButton><AddIcon width={"30px"} height={"30px"} border={"1px"} borderRadius={"100%"} padding={"5px"}></AddIcon></MenuButton>
                     <MenuList>
                         <MenuItem>Diseño Web</MenuItem>

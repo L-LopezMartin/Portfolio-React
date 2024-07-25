@@ -5,7 +5,7 @@ import { ArrowDownIcon, ArrowForwardIcon} from "@chakra-ui/icons"
 function HowIWork(){
     return(
         <Flex as={'section'} w={"100vw"} px={"10vw"}>
-            <Flex  direction={"column"} pr={"50px"} w={"30%"}>
+            <Flex  direction={"column"} w={"30%"}>
                 <Heading pb={"50px"}>Vea cómo trabajo <ArrowForwardIcon></ArrowForwardIcon></Heading>
                 <Text>Explore nuestros procesos detrás de escena, talenteoso equipo e innovadores proyectos. Infórmese sobre nuestro enfoque</Text>
                 <Flex py={"30px"} direction={"column"}>
@@ -27,7 +27,7 @@ function HowIWork(){
                     <Divider w={"100px"} borderRadius={"2px"}></Divider>
                 </Flex>
             </Flex>
-            <Flex direction={"column"} w={"70%"}>
+            <Flex direction={"column"} pl={"100px"} w={"70%"}>
                 <Flex direction={"column"}>
                     <Heading pb={"30px"}>Investigación</Heading>
                     <Flex>

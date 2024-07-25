@@ -3,7 +3,7 @@ import { Flex, Text, Image } from '@chakra-ui/react'
 function Banner() {
   
     return (
-        <Flex as={'section'}>
+        <Flex as={'section'} w={"100vw"} justifyContent={"space-around"} h={"150px"}>
             <Text>Diseño Web</Text>
             <Image alt='Star divider'></Image>
             <Text>Investigación de usuario</Text>
