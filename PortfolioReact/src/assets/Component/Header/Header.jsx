@@ -9,11 +9,12 @@ import {
   } from '@chakra-ui/react'
   import { Image } from '@chakra-ui/react'
   import {ChevronDownIcon} from '@chakra-ui/icons'
+  import mainLogo from "./img/AllfolioLogo.png"
 
 function Header() {
   return (
-    <Flex as={"header"} direction={'row'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'}>
-        <Image src='' alt='Page Logo'/>
+    <Flex as={"header"} direction={'row'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'} bg={"rgb(23, 22, 26)"}>
+        <Image src={mainLogo} alt='Page Logo'/>
         <Flex>
             <Button>
                 INICIO

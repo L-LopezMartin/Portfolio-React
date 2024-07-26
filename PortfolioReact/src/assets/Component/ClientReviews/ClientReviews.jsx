@@ -1,9 +1,10 @@
 import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons"
 import { Image, Flex, Heading, Box, Text, Button } from "@chakra-ui/react"
+import mrMakiu from "./img/MrMakiu.png"
 
 function ClientReviews(){
     return(
-        <Flex as={'section'} direction={"column"} px={"10vw"} w={"100vw"}>
+        <Flex as={'section'} direction={"column"} px={"10vw"} w={"100vw"} bg={"rgb(35, 34, 38)"}>
             <Heading w={"300px"} my={"50px"}>Vea lo que dicen los clientes <ArrowForwardIcon></ArrowForwardIcon></Heading>
             <Flex alignItems={"center"}>
                     <Button><ArrowBackIcon></ArrowBackIcon></Button>
@@ -12,7 +13,7 @@ function ClientReviews(){
                     <Text pl={"20px"}>Mr Makiu</Text>
                     <Text pl={"20px"} pb={"10px"}>Director de Marketing - Holalab</Text>
                 </Box>
-                <Image alt="MrMakiu" position={"relative"} left={"-300px"} top={"-100px"}></Image>
+                <Image src={mrMakiu} alt="MrMakiu" position={"relative"} left={"-300px"} top={"-100px"}></Image>
                     <Button><ArrowForwardIcon></ArrowForwardIcon></Button>
             </Flex>
         </Flex>

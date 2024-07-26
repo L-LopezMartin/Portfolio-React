@@ -1,10 +1,11 @@
 import { Flex, Heading, Text, Divider, Link, Image } from "@chakra-ui/react"
 import { ArrowDownIcon, ArrowForwardIcon} from "@chakra-ui/icons"
+import blogImg from "./img/Blog.png"
 
 
 function HowIWork(){
     return(
-        <Flex as={'section'} w={"100vw"} px={"10vw"}>
+        <Flex as={'section'} w={"100vw"} px={"10vw"} bg={"rgb(28, 27, 31)"}>
             <Flex  direction={"column"} w={"30%"}>
                 <Heading pb={"50px"}>Vea cómo trabajo <ArrowForwardIcon></ArrowForwardIcon></Heading>
                 <Text>Explore nuestros procesos detrás de escena, talenteoso equipo e innovadores proyectos. Infórmese sobre nuestro enfoque</Text>
@@ -15,7 +16,7 @@ function HowIWork(){
                     </Flex>
                     <Link>
                         <Flex direction={"column"}>
-                            <Image alt='BlogImg' h={"200px"}></Image>
+                            <Image src={blogImg} alt='BlogImg'></Image>
                             <Flex justifyContent={"space-between"}>
                                 <Text>Diseño</Text>
                                 <Text>11 JUN 2024</Text>

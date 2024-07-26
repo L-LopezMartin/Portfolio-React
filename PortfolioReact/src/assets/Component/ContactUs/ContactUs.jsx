@@ -1,9 +1,10 @@
-import { Divider, Flex, Heading, Text, FormLabel, FormControl, Button, Input } from "@chakra-ui/react"
+import { Divider, Flex, Heading, Text, FormLabel, FormControl, Button, Input, background } from "@chakra-ui/react"
+import imgFondo from "./img/BolaNegra.png"
 
 function ContactUs(){
 
     return(
-        <Flex as={'section'} direction={"column"} alignItems={"center"} w={"100vw"}>
+        <Flex as={'section'} w={"100vw"} direction={"column"} alignItems={"center"} bg={"rgb(232, 109, 70)"} bgImage={imgFondo} bgPos={"center"} bgRepeat={"no-repeat"} bgSize={"contain"}>
             <Heading my={"50px"}>¿Listo para discutir tu proyecto?</Heading>
             <Text>CONTÁCTAME</Text>
             <Divider w={"100px"} borderWidth={"5px"}></Divider>
