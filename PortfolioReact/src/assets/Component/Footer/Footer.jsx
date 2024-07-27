@@ -6,64 +6,78 @@ import logoBh from "./img/behance_logo.png"
 import logoUp from "./img/UpworkLogo.png"
 import ratingDribble from "./img/DribbleRating.png"
 import ratingUpwork from "./img/UpworkRating.png"
+import { color } from "framer-motion"
 
 
 function Footer(){
+    const inMenuStyle = {bgColor: "transparent", color: "rgb(230, 230, 320)", fontFamily: "IBM Plex Sans", fontWeight: "bold", fontSize: "16px"}
+    const inMenuHoverStyle = {color: "rgb(232, 106, 66)"}
+
+    const formButtonStyle = {bgColor: "transparent", color:"rgb(232, 106, 66)", w:"10%",h:"100%", fontSize:"24px"}
+
+    const titleStyle = {fontFamily:"IBM Plex Sans", fontWeight:"semibold", fontSize:"28px"}
+    const textStyle = {fontFamily:"IBM Plex Sans", fontSize:"16px", color:"rgb(193, 193, 194)"}
+    const textHoverStyle = {color:"rgb(230, 230, 320)"}
+
+    const snsStyle = {w:"40px", h:"40px", m:"10px", border:"2px", borderRadius:"100%", padding:"5px", borderColor:"grey"}
+    const snsHoverStyle = {borderColor: "rgb(232, 106, 66)"}
     return(
-        <Flex as={'footer'} direction={'column'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'} bg={"rgb(23, 22, 26)"}>
+        <Flex as={'footer'} direction={'column'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'} bg={"rgb(23, 22, 26)"} py={"20px"}>
             <Flex justifyContent={'space-between'} w={"100%"}>
-                <Flex  direction={'column'}>
-                    <Text my={"10px"}>Suscríbete al newsletter para estar al tanto de las noticias</Text>
-                    <FormControl >
-                        <Input placeholder="tu correo electrónico" w={"86%"}></Input>
-                        <Button w={"10%"} mx={"2"}> <ArrowForwardIcon></ArrowForwardIcon> </Button>
+                <Flex direction={'column'} w={"33%"}>
+                    <Text my={"10px"} sx={titleStyle}>Suscríbete al newsletter para estar al tanto de las noticias</Text>
+                    <FormControl display={"flex"} justifyContent={"space-between"}>
+                        <Input border={"0px"} placeholder="tu correo electrónico" w={"86%"} color={"white"}></Input>
+                        <Button sx={formButtonStyle}> <ArrowForwardIcon></ArrowForwardIcon> </Button>
                     </FormControl>
-                    <Divider my={"5px"} borderWidth={"1.5px"} borderRadius={"5px"}/>
-                    <Flex justifyContent={'center'} my={"30px"}>
-                        <Link mx={"10px"}><Image src={ratingUpwork} alt="UpWorkRating"></Image></Link>
-                        <Link mx={"10px"}><Image src={ratingDribble} alt="Dribble"></Image></Link>
+                    <Divider my={"5px"} borderWidth={"1.5px"} borderRadius={"7px"}/>
+                    <Flex justifyContent={'center'} my={"30px"} wrap={"wrap"}>
+                        <Link mx={"30px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingUpwork} alt="UpWorkRating"></Image></Link>
+                        <Link mx={"30px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingDribble} alt="Dribble"></Image></Link>
                     </Flex>
                 </Flex>
-                <Flex  direction={'column'}>
-                    <Text my={"10px"}>Links útiles</Text>
-                    <Link my={"5px"}>Proyectos</Link>
-                    <Link my={"5px"}>Servicios</Link>
-                    <Link my={"5px"}>Contactos</Link>
-                    <Link my={"5px"}>Blog</Link>
+                <Flex direction={'column'} w={"33%"} pl={"15%"}>
+                    <Text my={"10px"} sx={titleStyle}>Links útiles</Text>
+                    <Link my={"5px"} sx={textStyle} _hover={textHoverStyle}>Proyectos</Link>
+                    <Link my={"5px"} sx={textStyle} _hover={textHoverStyle}>Servicios</Link>
+                    <Link my={"5px"} sx={textStyle} _hover={textHoverStyle}>Contactos</Link>
+                    <Link my={"5px"} sx={textStyle} _hover={textHoverStyle}>Blog</Link>
                 </Flex>
-                <Flex  direction={'column'}>
-                    <Text my={"10px"}>Consultas</Text>
-                    <Text my={"5px"}>leanejemplo@gmail.com.ar</Text>
-                    <Text my={"5px"}>+54 9 261 6887381</Text>
-                    <Text my={"5px"}>sky_pe/leandro</Text>
+                <Flex direction={'column'} w={"33%"} pl={"15%"}>
+                    <Text my={"10px"} sx={titleStyle}>Consultas</Text>
+                    <Text my={"5px"} sx={textStyle}>leanejemplo@gmail.com.ar</Text>
+                    <Text my={"5px"} sx={textStyle}>+54 9 261 6887381</Text>
+                    <Text my={"5px"} sx={textStyle}>sky_pe/leandro</Text>
                 </Flex>
             </Flex>
             <Flex justifyContent={'space-between'} w={"100%"} alignItems={"center"}>
-                <Text>
+                <Text sx={titleStyle}>
                     Mostrar todos los servicios
                 </Text>
                 <Menu >
-                    <MenuButton><AddIcon width={"30px"} height={"30px"} border={"1px"} borderRadius={"100%"} padding={"5px"}></AddIcon></MenuButton>
-                    <MenuList>
-                        <MenuItem>Diseño Web</MenuItem>
-                        <MenuItem>Investigación de Usuario</MenuItem>
-                        <MenuItem>Soluciones Móviles</MenuItem>
-                        <MenuItem>Soluciones UI/UX</MenuItem>
+                    <MenuButton _hover={{color:"rgb(232, 106, 66)"}}>
+                        <AddIcon width={"30px"} height={"30px"} border={"1px"} borderRadius={"100%"} padding={"5px"}></AddIcon>
+                    </MenuButton>
+                    <MenuList border={"2px"} borderRadius={"7px"} borderColor={"rgb(232, 106, 66)"} bgColor={"rgb(23, 22, 26)"}>
+                        <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Diseño Web</MenuItem>
+                        <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Investigación de Usuario</MenuItem>
+                        <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones Móviles</MenuItem>
+                        <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones UI/UX</MenuItem>
                     </MenuList>
                 </Menu>
             </Flex>
 
-            <Divider my={"10px"}/>
+            <Divider my={"10px"} borderWidth={"1px"} borderRadius={"5px"}/>
 
-            <Flex justifyContent={'space-between'} w={"100%"}>
-                <Text>© 2024 Allfolio - All right reserved</Text>
+            <Flex justifyContent={'space-between'} w={"100%"} alignItems={"center"} my={"20px"}>
+                <Text color={"grey"}>© 2024 Allfolio - All right reserved</Text>
                 <Flex>
-                    <Link w={"30px"} h={"30px"} m={"10px"} border={"2px"} borderRadius={"100%"} padding={"5px"}><Image src={logoDb} alt="Dribble Logo"></Image></Link>
-                    <Link w={"30px"} h={"30px"} m={"10px"} border={"2px"} borderRadius={"100%"} padding={"5px"}><Image src={logoIg} alt="Instagram Logo"></Image></Link>
-                    <Link w={"30px"} h={"30px"} m={"10px"} border={"2px"} borderRadius={"100%"} padding={"5px"}><Image src={logoBh} alt="Behance Logo"></Image></Link>
-                    <Link w={"30px"} h={"30px"} m={"10px"} border={"2px"} borderRadius={"100%"} padding={"5px"}><Image src={logoUp} alt="UpWork Logo"></Image></Link>
+                    <Link sx={snsStyle} _hover={snsHoverStyle}><Image src={logoDb} alt="Dribble Logo"></Image></Link>
+                    <Link sx={snsStyle} _hover={snsHoverStyle}><Image src={logoIg} alt="Instagram Logo"></Image></Link>
+                    <Link sx={snsStyle} _hover={snsHoverStyle}><Image src={logoBh} alt="Behance Logo"></Image></Link>
+                    <Link sx={snsStyle} _hover={snsHoverStyle}><Image src={logoUp} alt="UpWork Logo"></Image></Link>
                 </Flex>
-                <Link>Política de privacidad</Link>
+                <Link color={"grey"}  _hover={textHoverStyle}>Política de privacidad</Link>
             </Flex>
         </Flex>
     )
