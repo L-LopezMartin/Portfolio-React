@@ -4,7 +4,7 @@ import videoAboutMe from "./img/VideoAboutMe.png"
 
 function Hero(){
     return(
-        <Flex as="section" w={"100vw"} px={"10vw"} direction={"row"} h={"80vh"} alignItems={"center"} bg={"rgb(23, 22, 26)"} bgImage={bgImage} bgSize={"50%"} bgRepeat={"no-repeat"} bgPos={"center"}>
+        <Flex as="section" w={"100vw"} px={"10vw"} direction={"row"} h={"70vh"} alignItems={"center"} bg={"rgb(23, 22, 26)"} bgImage={bgImage} bgSize={"50%"} bgRepeat={"no-repeat"} bgPos={"center"}>
             <Flex direction={"column"} w={"50%"}>
                 <Heading> Hola! Soy Leandro</Heading>
                 <Text><Highlight query={'UI/UX'}>Soy diseñador UI/UX</Highlight></Text>
