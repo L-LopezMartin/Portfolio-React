@@ -9,7 +9,7 @@ import porcentaje95 from "./img/95.png"
 
 function AboutMe(){
     return(
-        <Flex as={'section'} w={"100vw"} px={"10vw"} bg={"rgb(23, 22, 26)"}>
+        <Flex as={'section'} w={"100vw"} px={"10vw"} bg={"rgb(28, 27, 31)"}>
             <Flex w={"40%"}>
                 <Flex direction={"column"}>
                     <Link><Image src={logoDb} alt="Dribble Logo" w={"30px"}></Image></Link>

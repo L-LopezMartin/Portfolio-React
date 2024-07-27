@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+body{
+  width: 100vw;
+}
+
 h2, p, a, button{
   font-family: 'Playfair Display';
   color: rgb(230, 230, 320);
