@@ -8,10 +8,10 @@ import logoSQL from "./img/SQL.png"
 
 
 function MySkills(){
-    const logoTextStyle = {fontWeight:"bold", fontFamily:"IBM Plex Sans", fontSize:"24px"}
+    const logoTextStyle = {fontWeight:"bold", fontFamily:"IBM Plex Sans", fontSize:"24px", color:"rgb(230, 230, 230)"}
     return(
         <Flex as={'section'} w={"100vw"} px={"10vw"} py={"30px"} direction={"column"} bg={"rgb(23, 22, 26)"} pb={"40px"}>
-            <Heading fontFamily={"Playfair Display"} fontWeight={"bold"} fontSize={"48px"}>Mis habilidades</Heading>
+            <Heading fontFamily={"Playfair Display"} fontWeight={"bold"} fontSize={"48px"} color={"rgb(230, 230, 230)"}>Mis habilidades</Heading>
             <Flex justify={"center"} wrap={"wrap"} pt={"20px"}>
                 <Flex direction={"column"} alignItems={"center"} px={"50px"}>
                     <Text sx={logoTextStyle}>HTML</Text>
