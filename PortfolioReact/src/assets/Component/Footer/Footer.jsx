@@ -6,7 +6,6 @@ import logoBh from "./img/behance_logo.png"
 import logoUp from "./img/UpworkLogo.png"
 import ratingDribble from "./img/DribbleRating.png"
 import ratingUpwork from "./img/UpworkRating.png"
-import { color } from "framer-motion"
 
 
 function Footer(){
@@ -27,7 +26,7 @@ function Footer(){
                 <Flex direction={'column'} w={"33%"}>
                     <Text my={"10px"} sx={titleStyle}>Suscríbete al newsletter para estar al tanto de las noticias</Text>
                     <FormControl display={"flex"} justifyContent={"space-between"}>
-                        <Input border={"0px"} placeholder="tu correo electrónico" w={"86%"} color={"white"}></Input>
+                        <Input border={"2px"} borderColor={"transparent"} placeholder="tu correo electrónico" w={"86%"} color={"rgb(230,230,230)"} _focusVisible={{border:"2px",borderColor:"rgb(232, 106, 66)"}}></Input>
                         <Button sx={formButtonStyle}> <ArrowForwardIcon></ArrowForwardIcon> </Button>
                     </FormControl>
                     <Divider my={"5px"} borderWidth={"1.5px"} borderRadius={"7px"}/>
