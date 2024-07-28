@@ -5,10 +5,13 @@ import blogImg from "./img/Blog.png"
 
 function HowIWork(){
     const bigHeaderStyle = {color:"rgb(230, 230, 230)", fontSize:"62px", fontFamily:"Playfair Display"}
-    const smallTextStyle = {color:"rgb(217, 217, 217)", fontFamily:"IBM Plex Sans", fontWeight:"normal", fontSize:"18px"}
+    const smallTextStyle = {color:"rgb(217, 217, 217)", fontFamily:"IBM Plex Sans", fontWeight:"normal", fontSize:"20px"}
     const stepStepStyle = {color:"rgb(96, 96, 96)", w:"300px", fontFamily:"IBM Plex Sans", fontWeight:"semibold", fontSize:"22px"}
     const stepHeaderStyle = {color:"rgb(230, 230, 230)", pb:"50px"}
     const stepDivider = {w:"100%", my:"70px", borderWidth:"1px", borderRadius:"5px"}
+
+    const linkHoverStyle = {color:"rgb(232, 106, 66)"}
+    const linkStyle = {color:"rgb(192, 193, 194)", fontFamily:"IBM Plex Sans", fontSize:"22px", fontWeight:"semibold"}
     return(
         <Flex as={'section'} w={"100vw"} px={"10vw"} bg={"rgb(28, 27, 31)"} py={"100px"}>
             <Flex  direction={"column"} w={"40%"} justifyContent={"space-between"}>
@@ -20,7 +23,7 @@ function HowIWork(){
                     <Flex py={"30px"}>
                         <Heading sx={bigHeaderStyle}>Lee nuestros últimos blogs<ArrowDownIcon color={"rgb(232, 106, 66)"}></ArrowDownIcon></Heading>
                     </Flex>
-                    <Link>
+                    <Link _hover={{filter: "brightness(110%)"}}>
                         <Flex direction={"column"} bgColor={"rgb(37, 36, 39)"} p={"30px"} borderRadius={"10px"}>
                             <Image src={blogImg} alt='BlogImg'></Image>
                             <Flex justifyContent={"space-between"}>
@@ -32,7 +35,7 @@ function HowIWork(){
                     </Link>
                 </Flex>
                 <Box>
-                    <Link pt={"20px"}><Text color={"rgb(192, 193, 194)"} fontFamily={"IBM Plex Sans"} fontSize={"22px"} fontWeight={"semibold"}>MÁS ENTRADAS DE BLOG</Text></Link>
+                    <Link pt={"20px"}><Text sx={linkStyle} _hover={linkHoverStyle}>MÁS ENTRADAS DE BLOG</Text></Link>
                     <Divider w={"100px"} borderRadius={"2px"}></Divider>
                 </Box>
             </Flex>
