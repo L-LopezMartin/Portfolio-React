@@ -1,49 +1,69 @@
-import { Flex, Heading, Link, Text, Image, Divider, Button } from "@chakra-ui/react"
+import { Box, Flex, Heading, Link, Text, Image, Divider, Button } from "@chakra-ui/react"
 import proyectImg from "./img/Proyecto1.png"
 
 function ProjectsMade(){
+    const buttonStyle = {bgColor:"transparent", border:"1px", borderColor:"rgb(232, 106, 66)", px:"30px", py:"25px", color:"rgb(230,230,230)", fontFamily:"IBM Plex Sans"}
+    const buttonHoverStyle = {bgColor:"rgb(232, 106, 66)"}
+
+    const smallHeaderStyle = { color:"rgb(232, 106, 66)", fontFamily:"IBM Plex Sans", fontWeight:"semibold", fontSize:"24px"}
+    const bigHeaderStyle = {fontFamily:"Playfair Display", color:"rgb(230, 230, 230)", fontSize:"52px"}
+
+    const proyectHeaderStyle = {color:"rgb(192, 193, 194)", fontFamily:"IBM Plex Sans", fontSize:"16px", fontWeight:"semibold"}
+    const proyectTextStyle = {color:"white", fontFamily:"IBM Plex Sans", fontSize:"32px", fontWeight:"semibold", py:"40px"}
+    const linkStyle = {color:"rgb(192, 193, 194)", fontFamily:"IBM Plex Sans", fontWeight:"semibold", fontSize:"24px"}
+
+    const proyectImgStyleR = {borderRadius:"10px", transform:'skewX(-10deg)'}
+    const proyectImgStyleL = {borderRadius:"10px", transform:'skewX(10deg)'}
     
     return(
-        <Flex as={'section'} w={"100vw"} px={"10vw"} direction={"column"} alignItems={"center"} bg={"rgb(23, 22, 26)"}>
-            <Text>Proyectos</Text>
-            <Heading>Realizados</Heading>
-            <Flex w={"100%"} py={"30px"}>
-                <Flex direction={"column"} w={"75%"}>
-                    <Heading>Web UI/UX Design</Heading>
-                    <Text>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
-                    <Link>Ver proyecto completo</Link>
-                    <Divider w={"100px"} borderWidth={"2px"}></Divider>
+        <Flex as={'section'} w={"100vw"} px={"20vw"} py={"100px"} direction={"column"} alignItems={"center"} bg={"rgb(23, 22, 26)"}>
+            <Text sx={smallHeaderStyle}>Proyectos</Text>
+            <Heading sx={bigHeaderStyle}>Realizados</Heading>
+            <Flex w={"100%"} py={"50px"} align={"center"}>
+                <Flex direction={"column"} w={"45%"} px={"10px"}>
+                    <Heading sx={proyectHeaderStyle}>Web UI/UX Design</Heading>
+                    <Text sx={proyectTextStyle}>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
+                    <Link sx={linkStyle}>VER PROYECTO COMPLETO</Link>
+                    <Divider w={"200px"} borderWidth={"2px"} borderRadius={"5px"} my="10px"></Divider>
                 </Flex>
-                <Image src={proyectImg} w={"25%"} alt="Project Image"></Image>
+                <Box w={"55%"} bgColor={"rgb(34, 33, 37)"} p={"7% 7% 0 7%"} borderRadius={"10px"}>
+                    <Image src={proyectImg} alt="Project Image" sx={proyectImgStyleR}></Image>
+                </Box>
             </Flex>
-            <Flex w={"100%"} py={"30px"}>
-                <Image src={proyectImg} w={"25%"} alt="Project Image"></Image>
-                <Flex direction={"column"} w={"75%"}>
-                    <Heading>Web UI/UX Design</Heading>
-                    <Text>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
-                    <Link>Ver proyecto completo</Link>
-                    <Divider w={"100px"} borderWidth={"2px"}></Divider>
-                </Flex>
-            </Flex>
-            <Flex w={"100%"} py={"30px"}>
-                <Flex direction={"column"} w={"75%"}>
-                    <Heading>Web UI/UX Design</Heading>
-                    <Text>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
-                    <Link>Ver proyecto completo</Link>
-                    <Divider w={"100px"} borderWidth={"2px"}></Divider>
-                </Flex>
-                <Image src={proyectImg} w={"25%"} alt="Project Image"></Image>
-            </Flex>
-            <Flex w={"100%"} py={"30px"}>
-                <Image src={proyectImg} w={"25%"} alt="Project Image"></Image>
-                <Flex direction={"column"} w={"75%"}>
-                    <Heading>Web UI/UX Design</Heading>
-                    <Text>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
-                    <Link>Ver proyecto completo</Link>
-                    <Divider w={"100px"} borderWidth={"2px"}></Divider>
+            <Flex w={"100%"} py={"50px"} align={"center"}>
+                <Box w={"55%"} bgColor={"rgb(34, 33, 37)"} p={"7% 7% 0 7%"} borderRadius={"10px"}>
+                    <Image src={proyectImg} alt="Project Image" sx={proyectImgStyleL}></Image>
+                </Box>
+                <Flex direction={"column"} w={"45%"} px={"10px"}>
+                    <Heading sx={proyectHeaderStyle}>Web UI/UX Design</Heading>
+                    <Text sx={proyectTextStyle}>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
+                    <Link sx={linkStyle}>VER PROYECTO COMPLETO</Link>
+                    <Divider w={"200px"} borderWidth={"2px"} borderRadius={"5px"} my="10px"></Divider>
                 </Flex>
             </Flex>
-            <Button w={"100px"}>Ver Todos</Button>
+            <Flex w={"100%"} py={"50px"} align={"center"}>
+                <Flex direction={"column"} w={"45%"} px={"10px"}>
+                    <Heading sx={proyectHeaderStyle}>Web UI/UX Design</Heading>
+                    <Text sx={proyectTextStyle}>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
+                    <Link sx={linkStyle}>VER PROYECTO COMPLETO</Link>
+                    <Divider w={"200px"} borderWidth={"2px"} borderRadius={"5px"} my="10px"></Divider>
+                </Flex>
+                <Box w={"55%"} bgColor={"rgb(34, 33, 37)"} p={"7% 7% 0 7%"} borderRadius={"10px"}>
+                    <Image src={proyectImg} alt="Project Image" sx={proyectImgStyleR}></Image>
+                </Box>
+            </Flex>
+            <Flex w={"100%"} py={"50px"} align={"center"}>
+                <Box w={"55%"} bgColor={"rgb(34, 33, 37)"} p={"7% 7% 0 7%"} borderRadius={"10px"}>
+                    <Image src={proyectImg} alt="Project Image" sx={proyectImgStyleL}></Image>
+                </Box>
+                <Flex direction={"column"} w={"45%"} px={"10px"}>
+                    <Heading sx={proyectHeaderStyle}>Web UI/UX Design</Heading>
+                    <Text sx={proyectTextStyle}>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
+                    <Link sx={linkStyle}>VER PROYECTO COMPLETO</Link>
+                    <Divider w={"200px"} borderWidth={"2px"} borderRadius={"5px"} my="10px"></Divider>
+                </Flex>
+            </Flex>
+            <Button sx={buttonStyle} _hover={buttonHoverStyle}>Ver Todos</Button>
         </Flex>
     )
 }

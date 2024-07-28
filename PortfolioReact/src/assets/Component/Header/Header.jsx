@@ -1,17 +1,6 @@
-import { border, Flex, Text } from '@chakra-ui/react'
-import React from 'react'
-import { Button } from '@chakra-ui/react'
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-  } from '@chakra-ui/react'
-  import { Image } from '@chakra-ui/react'
-  import {ChevronDownIcon} from '@chakra-ui/icons'
-  import mainLogo from "./img/AllfolioLogo.png"
-import { color } from 'framer-motion'
-
+import { Flex, Button, Menu, MenuButton, MenuList, MenuItem, Image } from '@chakra-ui/react'
+import {ChevronDownIcon} from '@chakra-ui/icons'
+import mainLogo from "./img/AllfolioLogo.png"
 
 function Header() {
 
