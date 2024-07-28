@@ -1,36 +1,46 @@
-import { Box, Flex, Link, Image, Text, Button, Heading, Highlight, Divider } from "@chakra-ui/react"
+import { Box, Flex, Link, Image, Text, Button, Heading, Highlight, Divider} from "@chakra-ui/react"
 import bgImage from "./img/YoGrande.png"
 import videoAboutMe from "./img/VideoAboutMe.png"
 
 function Hero(){
+    const bgConfig = {bg:"rgb(23, 22, 26)", bgImage:bgImage, bgSize:"70%", bgRepeat:"no-repeat", bgPos:"80% 40%"}
+
+    const buttonStyle = {bgColor:"transparent", border:"1px", borderColor:"gray", color:"rgb(230, 230, 230)", fontFamily:"IBM Plex Sans", fontWeight:"bold", mx:"20px", px:"25px", py:"25px"}
+    const buttonHoverStyle = {bgColor:"rgb(217, 44, 10)", borderColor:"rgb(217, 44, 10)"}
+
+    const miniHeaderStyle = {color:"rgb(230, 230, 230)", fontWeight:"semibold", fontSize:"18px"}
+    const miniTextStyle = {color:"rgb(192, 193, 194)", fontSize:"18px"}
+
     return(
-        <Flex as="section" w={"100vw"} px={"10vw"} direction={"row"} h={"70vh"} alignItems={"center"} bg={"rgb(23, 22, 26)"} bgImage={bgImage} bgSize={"50%"} bgRepeat={"no-repeat"} bgPos={"center"}>
+        <Flex as="section" w={"100vw"} px={"10vw"} direction={"row"} h={"70vh"} alignItems={"center"} sx={bgConfig}>
             <Flex direction={"column"} w={"50%"}>
-                <Heading> Hola! Soy Leandro</Heading>
-                <Text><Highlight query={'UI/UX'}>Soy diseñador UI/UX</Highlight></Text>
-                <Text>Creador de experieniencias digitales fluidas</Text>
-                <Flex>
-                    <Button>Contáctame</Button>
-                    <Button>Ver curriculum</Button>
+                <Heading color={"rgb(192, 193, 194)"} fontSize={"18px"}> HOLA! SOY LEANDRO</Heading>
+                <Text color={"rgb(230, 230, 230)"} fontSize={"72px"} fontWeight={"bold"}>
+                    <Highlight query={'UI/UX'} styles={{color:"rgb(232, 106, 66)"}}>Soy diseñador UI/UX</Highlight>
+                </Text>
+                <Text color={"rgb(192, 193, 194)"} fontSize={"32px"} fontWeight={"semibold"}>Creador de experieniencias digitales fluidas</Text>
+                <Flex py={"70px"}>
+                    <Button sx={buttonStyle} _hover={buttonHoverStyle}>Contáctame</Button>
+                    <Button sx={buttonStyle} _hover={buttonHoverStyle}>Ver curriculum</Button>
                 </Flex>
-                <Flex>
+                <Flex alignItems={"center"}>
                     <Box>
-                        <Text>Email</Text>
-                        <Text>leanejemplo@gmail.com</Text>
+                        <Text sx={miniHeaderStyle}>Email</Text>
+                        <Text sx={miniTextStyle}>leanejemplo@gmail.com</Text>
                     </Box>
-                    <Divider orientation="vertical" h={"50px"} mx={"20px"}></Divider>
+                    <Divider orientation="vertical" h={"40px"} mx={"20px"}></Divider>
                     <Box>
-                        <Text>Teléfono</Text>
-                        <Text>+54 9 261 6887381</Text>
+                        <Text sx={miniHeaderStyle}>Teléfono</Text>
+                        <Text sx={miniTextStyle}>+54 9 261 6887381</Text>
                     </Box>
-                    <Divider orientation="vertical" h={"50px"} mx={"20px"}></Divider>
+                    <Divider orientation="vertical" h={"40px"} mx={"20px"}></Divider>
                     <Box>
-                        <Text>Ubicación</Text>
-                        <Text>Mendoza, Agentina</Text>
+                        <Text sx={miniHeaderStyle}>Ubicación</Text>
+                        <Text sx={miniTextStyle}>Mendoza, Agentina</Text>
                     </Box>
                 </Flex>
             </Flex>
-            <Link position={"absolute"} right={"20vw"} top={"30vh"}><Image src={videoAboutMe} alt="Conoce más sobre mí" boxSize={"100px"}></Image></Link>
+            <Link position={"absolute"} right={"20vw"} top={"30vh"}><Image src={videoAboutMe} alt="Conoce más sobre mí" boxSize={"120px"} _hover={{filter: "brightness(150%)"}}></Image></Link>
         </Flex>
     )
 }
