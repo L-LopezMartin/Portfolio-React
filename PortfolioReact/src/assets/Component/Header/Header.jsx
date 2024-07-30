@@ -34,8 +34,8 @@ function Header() {
     }
 
   return (
-    <Flex as={"header"} position={"fixed"} zIndex={"2"} direction={'row'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'} bg={"rgb(23, 22, 26)"} h={"80px"} id='Header'>
-        <Image src={mainLogo} alt='Page Logo' w={{base:"80px", md:"120px"}}/>
+    <Flex as={"header"} position={"fixed"} zIndex={"2"} direction={'row'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'} bg={"rgb(23, 22, 26)"} h={{base:"50px", md:"60px"}} id='Header'>
+        <Image src={mainLogo} alt='Page Logo' w={{base:"60px", md:"120px"}}/>
         <Flex as={"nav"} display={{base:"none", xl:"flex"}}>
             <Button sx={buttonStyle} _hover={buttonHoverStyle} onClick={scrollHero}>
                 INICIO
@@ -77,7 +77,7 @@ function Header() {
                 </MenuList>
             </Menu>
         </Flex>
-        <Button sx={hablemosStyle} _hover={hablemosHoverStyle} w={{base:"100px", md:"150px"}} h={{base:"30px", md:"60px"}} onClick={scrollContact}>
+        <Button sx={hablemosStyle} _hover={hablemosHoverStyle} w={{base:"100px", md:"150px"}} h={{base:"30px", md:"45px"}} onClick={scrollContact}>
             HABLEMOS
         </Button>
     </Flex>

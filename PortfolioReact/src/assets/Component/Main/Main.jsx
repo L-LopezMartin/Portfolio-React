@@ -12,12 +12,12 @@ function Main(){
         <main>
             <Hero></Hero>
             <Banner></Banner>
-            <AboutMe></AboutMe>
+            {/* <AboutMe></AboutMe>
             <MySkills></MySkills>
             <HowIWork></HowIWork>
             <ProjectsMade></ProjectsMade>
             <ClientReviews></ClientReviews>
-            <ContactUs></ContactUs>
+            <ContactUs></ContactUs> */}
         </main>
     )
 }
