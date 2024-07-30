@@ -25,7 +25,7 @@ function ProjectsMade(){
                 <Flex direction={"column"} w={"45%"} px={"10px"}>
                     <Heading sx={proyectHeaderStyle}>Web UI/UX Design</Heading>
                     <Text sx={proyectTextStyle}>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
-                    <Link sx={linkStyle} _hover={linkHoverStyle}>VER PROYECTO COMPLETO</Link>
+                    <Link href="https://github.com/L-LopezMartin" sx={linkStyle} _hover={linkHoverStyle}>VER PROYECTO COMPLETO</Link>
                     <Divider w={"200px"} borderWidth={"2px"} borderRadius={"5px"} my="10px"></Divider>
                 </Flex>
                 <Box w={"55%"} bgColor={"rgb(34, 33, 37)"} p={"7% 7% 0 7%"} borderRadius={"10px"}>
@@ -39,7 +39,7 @@ function ProjectsMade(){
                 <Flex direction={"column"} w={"45%"} px={"10px"}>
                     <Heading sx={proyectHeaderStyle}>Web UI/UX Design</Heading>
                     <Text sx={proyectTextStyle}>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
-                    <Link sx={linkStyle} _hover={linkHoverStyle}>VER PROYECTO COMPLETO</Link>
+                    <Link href="https://github.com/L-LopezMartin" sx={linkStyle} _hover={linkHoverStyle}>VER PROYECTO COMPLETO</Link>
                     <Divider w={"200px"} borderWidth={"2px"} borderRadius={"5px"} my="10px"></Divider>
                 </Flex>
             </Flex>
@@ -47,7 +47,7 @@ function ProjectsMade(){
                 <Flex direction={"column"} w={"45%"} px={"10px"}>
                     <Heading sx={proyectHeaderStyle}>Web UI/UX Design</Heading>
                     <Text sx={proyectTextStyle}>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
-                    <Link sx={linkStyle} _hover={linkHoverStyle}>VER PROYECTO COMPLETO</Link>
+                    <Link href="https://github.com/L-LopezMartin" sx={linkStyle} _hover={linkHoverStyle}>VER PROYECTO COMPLETO</Link>
                     <Divider w={"200px"} borderWidth={"2px"} borderRadius={"5px"} my="10px"></Divider>
                 </Flex>
                 <Box w={"55%"} bgColor={"rgb(34, 33, 37)"} p={"7% 7% 0 7%"} borderRadius={"10px"}>
@@ -61,11 +61,11 @@ function ProjectsMade(){
                 <Flex direction={"column"} w={"45%"} px={"10px"}>
                     <Heading sx={proyectHeaderStyle}>Web UI/UX Design</Heading>
                     <Text sx={proyectTextStyle}>Protfolio / Landing Page - Proyecto final del curso de desarrollo FullStack. Lo estás visualizando ahora mismo.</Text>
-                    <Link sx={linkStyle} _hover={linkHoverStyle}>VER PROYECTO COMPLETO</Link>
+                    <Link href="https://github.com/L-LopezMartin" sx={linkStyle} _hover={linkHoverStyle}>VER PROYECTO COMPLETO</Link>
                     <Divider w={"200px"} borderWidth={"2px"} borderRadius={"5px"} my="10px"></Divider>
                 </Flex>
             </Flex>
-            <Button sx={buttonStyle} _hover={buttonHoverStyle}>Ver Todos</Button>
+            <Link href="https://github.com/L-LopezMartin"><Button sx={buttonStyle} _hover={buttonHoverStyle}>Ver Todos</Button></Link>
         </Flex>
     )
 }

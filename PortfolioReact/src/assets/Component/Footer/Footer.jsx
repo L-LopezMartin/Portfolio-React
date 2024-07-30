@@ -31,16 +31,16 @@ function Footer(){
                     </FormControl>
                     <Divider my={"5px"} borderWidth={"1.5px"} borderRadius={"7px"}/>
                     <Flex justifyContent={'center'} my={"30px"} wrap={"wrap"}>
-                        <Link mx={"30px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingUpwork} alt="UpWorkRating"></Image></Link>
-                        <Link mx={"30px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingDribble} alt="Dribble"></Image></Link>
+                        <Link href="https://www.upwork.com/" mx={"30px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingUpwork} alt="UpWorkRating"></Image></Link>
+                        <Link href="https://dribbble.com/" mx={"30px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingDribble} alt="Dribble"></Image></Link>
                     </Flex>
                 </Flex>
                 <Flex direction={'column'} w={"33%"} pl={"15%"}>
-                    <Text my={"10px"} sx={titleStyle}>Links útiles</Text>
-                    <Link my={"5px"} sx={textStyle} _hover={textHoverStyle}>Proyectos</Link>
-                    <Link my={"5px"} sx={textStyle} _hover={textHoverStyle}>Servicios</Link>
-                    <Link my={"5px"} sx={textStyle} _hover={textHoverStyle}>Contactos</Link>
-                    <Link my={"5px"} sx={textStyle} _hover={textHoverStyle}>Blog</Link>
+                    <Text href="https://github.com/L-LopezMartin" my={"10px"} sx={titleStyle}>Links útiles</Text>
+                    <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Proyectos</Link>
+                    <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Servicios</Link>
+                    <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Contactos</Link>
+                    <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Blog</Link>
                 </Flex>
                 <Flex direction={'column'} w={"33%"} pl={"15%"}>
                     <Text my={"10px"} sx={titleStyle}>Consultas</Text>
@@ -58,10 +58,10 @@ function Footer(){
                         <AddIcon width={"30px"} height={"30px"} border={"1px"} borderRadius={"100%"} padding={"5px"}></AddIcon>
                     </MenuButton>
                     <MenuList border={"2px"} borderRadius={"7px"} borderColor={"rgb(232, 106, 66)"} bgColor={"rgb(23, 22, 26)"}>
-                        <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Diseño Web</MenuItem>
-                        <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Investigación de Usuario</MenuItem>
-                        <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones Móviles</MenuItem>
-                        <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones UI/UX</MenuItem>
+                        <Link  href="https://github.com/L-LopezMartin"><MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Diseño Web</MenuItem></Link>
+                        <Link  href="https://github.com/L-LopezMartin"><MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Investigación de Usuario</MenuItem></Link>
+                        <Link  href="https://github.com/L-LopezMartin"><MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones Móviles</MenuItem></Link>
+                        <Link  href="https://github.com/L-LopezMartin"><MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones UI/UX</MenuItem></Link>
                     </MenuList>
                 </Menu>
             </Flex>
@@ -71,12 +71,12 @@ function Footer(){
             <Flex justifyContent={'space-between'} w={"100%"} alignItems={"center"} my={"20px"}>
                 <Text color={"grey"}>© 2024 Allfolio - All right reserved</Text>
                 <Flex>
-                    <Link sx={snsStyle} _hover={snsHoverStyle}><Image src={logoDb} alt="Dribble Logo"></Image></Link>
-                    <Link sx={snsStyle} _hover={snsHoverStyle}><Image src={logoIg} alt="Instagram Logo"></Image></Link>
-                    <Link sx={snsStyle} _hover={snsHoverStyle}><Image src={logoBh} alt="Behance Logo"></Image></Link>
-                    <Link sx={snsStyle} _hover={snsHoverStyle}><Image src={logoUp} alt="UpWork Logo"></Image></Link>
+                    <Link href="https://dribbble.com/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoDb} alt="Dribble Logo"></Image></Link>
+                    <Link href="https://www.instagram.com/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoIg} alt="Instagram Logo"></Image></Link>
+                    <Link href="https://www.behance.net/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoBh} alt="Behance Logo"></Image></Link>
+                    <Link href="https://www.upwork.com/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoUp} alt="UpWork Logo"></Image></Link>
                 </Flex>
-                <Link color={"grey"}  _hover={textHoverStyle}>Política de privacidad</Link>
+                <Link href="https://youtu.be/0CdMqJ9Lidg?t=4)" color={"grey"}  _hover={textHoverStyle}>Política de privacidad</Link>
             </Flex>
         </Flex>
     )

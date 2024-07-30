@@ -11,8 +11,13 @@ function Hero(){
     const miniHeaderStyle = {color:"rgb(230, 230, 230)", fontWeight:"semibold", fontSize:"18px"}
     const miniTextStyle = {color:"rgb(192, 193, 194)", fontSize:"18px"}
 
+    const scrollContact=()=>{
+        const dest = document.getElementById("Contact");
+        dest.scrollIntoView({behavior: "smooth"});
+    }
+
     return(
-        <Flex as="section" w={"100vw"} px={"10vw"} direction={"row"} h={"70vh"} alignItems={"center"} sx={bgConfig}>
+        <Flex as="section" id="Hero" w={"100vw"} px={"10vw"} direction={"row"} h={"80vh"} alignItems={"center"} sx={bgConfig}>
             <Flex direction={"column"} w={"50%"}>
                 <Heading color={"rgb(192, 193, 194)"} fontSize={"18px"}> HOLA! SOY LEANDRO</Heading>
                 <Text color={"rgb(230, 230, 230)"} fontSize={"72px"} fontWeight={"bold"}>
@@ -20,8 +25,8 @@ function Hero(){
                 </Text>
                 <Text color={"rgb(192, 193, 194)"} fontSize={"32px"} fontWeight={"semibold"}>Creador de experieniencias digitales fluidas</Text>
                 <Flex py={"70px"}>
-                    <Button sx={buttonStyle} _hover={buttonHoverStyle}>Contáctame</Button>
-                    <Button sx={buttonStyle} _hover={buttonHoverStyle}>Ver curriculum</Button>
+                    <Button sx={buttonStyle} _hover={buttonHoverStyle} onClick={scrollContact}>Contáctame</Button>
+                    <Link href="https://github.com/L-LopezMartin"><Button sx={buttonStyle} _hover={buttonHoverStyle}>Ver curriculum</Button></Link>
                 </Flex>
                 <Flex alignItems={"center"}>
                     <Box>
@@ -40,7 +45,7 @@ function Hero(){
                     </Box>
                 </Flex>
             </Flex>
-            <Link position={"absolute"} right={"20vw"} top={"30vh"}><Image src={videoAboutMe} alt="Conoce más sobre mí" boxSize={"120px"} _hover={{filter: "brightness(150%)"}}></Image></Link>
+            <Link href="https://youtu.be/0CdMqJ9Lidg?t=4)" position={"absolute"} right={"20vw"} top={"30vh"}><Image src={videoAboutMe} alt="Conoce más sobre mí" boxSize={"120px"} _hover={{filter: "brightness(150%)"}}></Image></Link>
         </Flex>
     )
 }

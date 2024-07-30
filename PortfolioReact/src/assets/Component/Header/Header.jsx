@@ -1,10 +1,10 @@
-import { Flex, Button, Menu, MenuButton, MenuList, MenuItem, Image } from '@chakra-ui/react'
+import { Flex, Button, Menu, MenuButton, MenuList, MenuItem, Image, Link } from '@chakra-ui/react'
 import {ChevronDownIcon} from '@chakra-ui/icons'
 import mainLogo from "./img/AllfolioLogo.png"
 
 function Header() {
 
-    const buttonStyle = {bgColor: "transparent", color: "rgb(230, 230, 320)", fontFamily: "IBM Plex Sans", fontWeight: "bold", fontSize: "16px"}
+    const buttonStyle = {mx:"5px", bgColor: "transparent", color: "rgb(230, 230, 320)", fontFamily: "IBM Plex Sans", fontWeight: "bold", fontSize: "16px"}
     const buttonHoverStyle = {bgColor: "white", color: "black"}
     const inMenuStyle = {bgColor: "transparent", color: "rgb(230, 230, 320)", fontFamily: "IBM Plex Sans", fontWeight: "bold", fontSize: "16px"}
     const inMenuHoverStyle = {color: "rgb(232, 106, 66)"}
@@ -12,17 +12,38 @@ function Header() {
     const hablemosStyle = {bg:'white', fontFamily:"IBM Plex Sans", color:"rgb(232, 106, 66)", fontWeight:"bold"}
     const hablemosHoverStyle = {color:'white', fontFamily:"IBM Plex Sans", bg:"rgb(232, 106, 66)", fontWeight:"bold"}
 
+    const scrollHero=()=>{
+        const dest = document.getElementById("Hero");
+        dest.scrollIntoView({behavior: "smooth"});
+    }
+    const scrollAboutMe=()=>{
+        const dest = document.getElementById("AboutMe");
+        dest.scrollIntoView({behavior: "smooth"});
+    }
+    const scrollHowIWork=()=>{
+        const dest = document.getElementById("HowIWork");
+        dest.scrollIntoView({behavior: "smooth"});
+    }
+    const scrollReviews=()=>{
+        const dest = document.getElementById("Reviews");
+        dest.scrollIntoView({behavior: "smooth"});
+    }
+    const scrollContact=()=>{
+        const dest = document.getElementById("Contact");
+        dest.scrollIntoView({behavior: "smooth"});
+    }
+
   return (
-    <Flex as={"header"} direction={'row'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'} bg={"rgb(23, 22, 26)"} h={"70px"}>
+    <Flex as={"header"} position={"fixed"} zIndex={"2"} direction={'row'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'} bg={"rgb(23, 22, 26)"} h={"80px"} id='Header'>
         <Image src={mainLogo} alt='Page Logo'/>
         <Flex as={"nav"}>
-            <Button sx={buttonStyle} _hover={buttonHoverStyle}>
+            <Button sx={buttonStyle} _hover={buttonHoverStyle} onClick={scrollHero}>
                 INICIO
             </Button>
-            <Button sx={buttonStyle} _hover={buttonHoverStyle}>
+            <Button sx={buttonStyle} _hover={buttonHoverStyle} onClick={scrollAboutMe}>
                 SOBRE MI
             </Button>
-            <Button sx={buttonStyle} _hover={buttonHoverStyle}>
+            <Button sx={buttonStyle} _hover={buttonHoverStyle} onClick={scrollHero}>
                 PORTFOLIO
             </Button>
             <Menu>
@@ -30,21 +51,21 @@ function Header() {
                     SERVICIOS
                 </MenuButton>
                 <MenuList border={"2px"} borderRadius={"7px"} borderColor={"rgb(232, 106, 66)"} bgColor={"rgb(23, 22, 26)"}>
-                    <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Diseño Web</MenuItem>
-                    <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Investigación de Usuario</MenuItem>
-                    <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones Móviles</MenuItem>
-                    <MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones UI/UX</MenuItem>
+                    <Link href="https://github.com/L-LopezMartin"><MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Diseño Web</MenuItem></Link>
+                    <Link href="https://github.com/L-LopezMartin"><MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Investigación de Usuario</MenuItem></Link>
+                    <Link href="https://github.com/L-LopezMartin"><MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones Móviles</MenuItem></Link>
+                    <Link href="https://github.com/L-LopezMartin"><MenuItem sx={inMenuStyle} _hover={inMenuHoverStyle}>Soluciones UI/UX</MenuItem></Link>
                 </MenuList>
             </Menu>
-            <Button sx={buttonStyle} _hover={buttonHoverStyle}>
+            <Button sx={buttonStyle} _hover={buttonHoverStyle} onClick={scrollHowIWork}>
                 PROCESO
             </Button>
-            <Button sx={buttonStyle} _hover={buttonHoverStyle}>
+            <Button sx={buttonStyle} _hover={buttonHoverStyle} onClick={scrollReviews}>
                 RESEÑAS
             </Button>
         </Flex>
             
-        <Button sx={hablemosStyle} _hover={hablemosHoverStyle}>
+        <Button sx={hablemosStyle} _hover={hablemosHoverStyle} w={"150px"} h={"60px"} onClick={scrollContact}>
             HABLEMOS
         </Button>
     </Flex>

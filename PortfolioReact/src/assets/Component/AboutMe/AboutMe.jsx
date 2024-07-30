@@ -23,12 +23,12 @@ function AboutMe(){
     const fieldNameStyle = {fontFamily:"IBM Plex Sans", color:"rgb(217, 217, 217)", fontSize:"20px", fontWeight:"semibold", pt:"10px"}
 
     return(
-        <Flex as={'section'} w={"100vw"} px={"10vw"} bg={"rgb(28, 27, 31)"} py={"150px"} alignItems={"center"}>
+        <Flex as={'section'} id="AboutMe" w={"100vw"} px={"10vw"} bg={"rgb(28, 27, 31)"} py={"150px"} alignItems={"center"}>
             <Box w={"50%"} h={"700px"}>
                 <Flex sx={snsContainerStyle} direction={"column"} justifyContent={"center"}>
-                    <Link><Image sx={snsStyle} _hover={snsHoverStyle} src={logoDb} alt="Dribble Logo" w={"30px"}></Image></Link>
-                    <Link><Image sx={snsStyle} _hover={snsHoverStyle} src={logoIg} alt="Instagram Logo" w={"30px"}></Image></Link>
-                    <Link><Image sx={snsStyle} _hover={snsHoverStyle} src={logoBh} alt="Behance Logo" w={"30px"}></Image></Link>
+                    <Link href="https://dribbble.com/"><Image sx={snsStyle} _hover={snsHoverStyle} src={logoDb} alt="Dribble Logo" w={"30px"}></Image></Link>
+                    <Link href="https://www.instagram.com/"><Image sx={snsStyle} _hover={snsHoverStyle} src={logoIg} alt="Instagram Logo" w={"30px"}></Image></Link>
+                    <Link href="https://www.behance.net/"><Image sx={snsStyle} _hover={snsHoverStyle} src={logoBh} alt="Behance Logo" w={"30px"}></Image></Link>
                 </Flex>
                 <Image sx={imgStyle} src={yoTrabajo} alt="Trabalho" ></Image>
             </Box>

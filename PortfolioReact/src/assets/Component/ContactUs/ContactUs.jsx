@@ -11,7 +11,7 @@ function ContactUs(){
     const buttonHoverStyle = {bgColor:"rgb(232, 106, 66)", color:"black"}
 
     return(
-        <Flex as={'section'} w={"100vw"} direction={"column"} alignItems={"center"} bg={"rgb(232, 109, 70)"} bgImage={imgFondo} bgPos={"center"} bgRepeat={"no-repeat"} bgSize={"contain"}>
+        <Flex as={'section'} id="Contact" w={"100vw"} direction={"column"} alignItems={"center"} bg={"rgb(232, 109, 70)"} bgImage={imgFondo} bgPos={"center"} bgRepeat={"no-repeat"} bgSize={"contain"}>
             <Heading mt={"50px"} fontFamily={"IBM Plex Sans"} fontSize={"78px"} w={"50%"} textAlign={"center"} color={"rgb(230,230,230)"}>¿Listo para discutir tu proyecto?</Heading>
             <Text mt={"30px"} fontFamily={"IBM Plex Sans"} fontWeight={"bold"} fontSize={"24px"} zIndex={"1"} color={"rgb(230,230,230)"}>CONTÁCTAME</Text>
             <Divider w={"150px"} borderWidth={"7px"} borderColor={"rgb(232, 106, 66)"} position={"relative"} top={"-15px"} opacity={"1"}></Divider>
