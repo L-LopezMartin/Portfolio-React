@@ -1,5 +1,5 @@
 import { Flex, Text, Link, Image, Divider, Menu, FormControl, Input, Button, MenuButton, MenuList, MenuItem} from "@chakra-ui/react"
-import { ArrowForwardIcon, AddIcon } from "@chakra-ui/icons"
+import { ArrowForwardIcon, AddIcon, CheckIcon } from "@chakra-ui/icons"
 import logoDb from "./img/globe.png"
 import logoIg from "./img/Instagram.png"
 import logoBh from "./img/behance_logo.png"
@@ -20,15 +20,33 @@ function Footer(){
 
     const snsStyle = {w:"40px", h:"40px", m:"10px", border:"2px", borderRadius:"100%", padding:"5px", borderColor:"grey"}
     const snsHoverStyle = {borderColor: "rgb(232, 106, 66)"}
+
+    function suscribe(e){
+        e.preventDefault()
+        const arrow = document.getElementById("arrow")
+        const check = document.getElementById("check")
+        const email = document.getElementById("emailFooter")
+
+        arrow.setAttribute("style", "display:none")
+        check.setAttribute("style", "display:block")
+
+        console.log(email.value, " se sucribió al newsletter" )
+    }
+
     return(
         <Flex as={'footer'} direction={'column'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'} bg={"rgb(23, 22, 26)"} py={"20px"}>
             <Flex justifyContent={'space-between'} w={"100%"}>
                 <Flex direction={'column'} w={"33%"}>
                     <Text my={"10px"} sx={titleStyle}>Suscríbete al newsletter para estar al tanto de las noticias</Text>
-                    <FormControl display={"flex"} justifyContent={"space-between"}>
-                        <Input border={"2px"} borderColor={"transparent"} placeholder="tu correo electrónico" w={"86%"} color={"rgb(230,230,230)"} _focusVisible={{border:"2px",borderColor:"rgb(232, 106, 66)"}}></Input>
-                        <Button sx={formButtonStyle}> <ArrowForwardIcon></ArrowForwardIcon> </Button>
-                    </FormControl>
+                    <form onSubmit={suscribe}>
+                        <FormControl display={"flex"} justifyContent={"space-between"}>
+                            <Input id="emailFooter"type="email" border={"2px"} borderColor={"transparent"} placeholder="tu correo electrónico" w={"86%"} color={"rgb(230,230,230)"} _focusVisible={{border:"2px",borderColor:"rgb(232, 106, 66)"}}></Input>
+                            <Button type="submit" sx={formButtonStyle}>
+                                <ArrowForwardIcon h={"40px"} id="arrow"></ArrowForwardIcon>
+                            </Button>
+                            <CheckIcon id="check" fontSize={"40px"} color={"rgb(232, 106, 66)"} display={"none"}></CheckIcon>
+                        </FormControl>
+                    </form>
                     <Divider my={"5px"} borderWidth={"1.5px"} borderRadius={"7px"}/>
                     <Flex justifyContent={'center'} my={"30px"} wrap={"wrap"}>
                         <Link href="https://www.upwork.com/" mx={"30px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingUpwork} alt="UpWorkRating"></Image></Link>
