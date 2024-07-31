@@ -11,13 +11,13 @@ function Main(){
     return(
         <main>
             <Hero></Hero>
-            <Banner></Banner>
-            {/* <AboutMe></AboutMe>
+            {/* <Banner></Banner>
+            <AboutMe></AboutMe>
             <MySkills></MySkills>
             <HowIWork></HowIWork>
             <ProjectsMade></ProjectsMade>
-            <ClientReviews></ClientReviews>
-            <ContactUs></ContactUs> */}
+            <ClientReviews></ClientReviews> */}
+            <ContactUs></ContactUs>
         </main>
     )
 }

@@ -31,8 +31,8 @@ function ContactUs(){
     }
     
     return(
-        <Flex as={'section'} id="Contact" w={"100vw"} h={"800px"} direction={"column"} alignItems={"center"} bg={"rgb(232, 109, 70)"} bgImage={imgFondo} bgPos={"center"} bgRepeat={"no-repeat"} bgSize={"contain"}>
-            <Heading mt={"50px"} fontFamily={"IBM Plex Sans"} fontSize={"78px"} w={"50%"} textAlign={"center"} color={"rgb(230,230,230)"}>¿Listo para discutir tu proyecto?</Heading>
+        <Flex as={'section'} id="Contact" w={"100vw"} h={"800px"} direction={"column"} alignItems={"center"} bg={"rgb(232, 109, 70)"} bgImage={imgFondo} bgPos={"center"} bgRepeat={"no-repeat"} bgSize={{base:"700px 700px", md:"contain"}}>
+            <Heading mt={"50px"} fontFamily={"IBM Plex Sans"} fontSize={{base:"42px", md:"56px", lg:"78px"}} w={"70%"} textAlign={"center"} color={"rgb(230,230,230)"}>¿Listo para discutir tu proyecto?</Heading>
             <Text mt={"30px"} fontFamily={"IBM Plex Sans"} fontWeight={"bold"} fontSize={"24px"} zIndex={"1"} color={"rgb(230,230,230)"}>CONTÁCTAME</Text>
             <Divider w={"150px"} borderWidth={"7px"} borderColor={"rgb(232, 106, 66)"} position={"relative"} top={"-15px"} opacity={"1"}></Divider>
             <form onSubmit={enviarForm}>
