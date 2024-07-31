@@ -13,8 +13,8 @@ function Main(){
             <Hero></Hero>
             <Banner></Banner>
             <AboutMe></AboutMe>
-            {/* <MySkills></MySkills>
-            <HowIWork></HowIWork>
+            <MySkills></MySkills>
+            {/* <HowIWork></HowIWork>
             <ProjectsMade></ProjectsMade>
             <ClientReviews></ClientReviews> */}
             <ContactUs></ContactUs>
