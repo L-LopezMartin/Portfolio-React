@@ -14,9 +14,9 @@ function Main(){
             <Banner></Banner>
             <AboutMe></AboutMe>
             <MySkills></MySkills>
-            {/* <HowIWork></HowIWork>
+            {/* <HowIWork></HowIWork> */}
             <ProjectsMade></ProjectsMade>
-            <ClientReviews></ClientReviews> */}
+            {/* <ClientReviews></ClientReviews> */}
             <ContactUs></ContactUs>
         </main>
     )
