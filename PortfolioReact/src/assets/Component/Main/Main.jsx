@@ -11,9 +11,9 @@ function Main(){
     return(
         <main>
             <Hero></Hero>
-            {/* <Banner></Banner>
+            <Banner></Banner>
             <AboutMe></AboutMe>
-            <MySkills></MySkills>
+            {/* <MySkills></MySkills>
             <HowIWork></HowIWork>
             <ProjectsMade></ProjectsMade>
             <ClientReviews></ClientReviews> */}
