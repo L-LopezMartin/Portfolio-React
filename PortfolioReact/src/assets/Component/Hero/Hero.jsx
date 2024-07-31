@@ -17,39 +17,40 @@ function Hero(){
     }
 
     return(
-        <Flex as="section" id="Hero" w={"100vw"} px={"10vw"} direction={"row"} h={"90vh"} alignItems={"center"} sx={bgConfig}>
+        <Flex as="section" id="Hero" w={"100vw"} px={"10vw"} h={{base:"500px", md:"400px", lg:"80vh"}} alignItems={"center"} sx={bgConfig}>
             <Flex direction={"column"} w={{base:"100%", md:"80%",lg:"70%"}}>
-                <Box w={{base:"70%", md:"100%"}}>
+                <Box w={{base:"100%", md:"100%"}}>
                     <Heading color={"rgb(192, 193, 194)"} fontSize={{base:"12px",lg:"14px", '2xl':"18px"}}> HOLA! SOY LEANDRO</Heading>
                     <Text color={"rgb(230, 230, 230)"} fontSize={{base:"36px", lg:"50px" ,'2xl':"72px"}} fontWeight={"bold"}>
                         <Highlight query={'UI/UX'} styles={{color:"rgb(232, 106, 66)"}}>Soy diseñador UI/UX</Highlight>
                     </Text>
-                    <Text color={"rgb(192, 193, 194)"} fontSize={{base:"18px",lg:"24px",'2xl':"32px"}} fontWeight={"semibold"}>Creador de experieniencias digitales fluidas</Text>
-                    <Link display={{base:"block", md:"none"}} href="https://youtu.be/0CdMqJ9Lidg?t=4)" position={"absolute"} right={"10vw"} top={"20vh"}><Image src={videoAboutMe} alt="Conoce más sobre mí" boxSize={"80px"} _hover={{filter: "brightness(150%)"}}></Image></Link>
+                    <Text color={"rgb(192, 193, 194)"} fontSize={{base:"16px",lg:"24px",'2xl':"32px"}} fontWeight={"semibold"}>Creador de experieniencias digitales fluidas</Text>
                 </Box>
-                <Flex py={{base:"20px", md:"70px"}}>
+                <Flex py={{base:"20px", lg:"70px"}}>
                     <Button sx={buttonStyle} _hover={buttonHoverStyle} onClick={scrollContact}>Contáctame</Button>
                     <Link href="https://github.com/L-LopezMartin"><Button sx={buttonStyle} _hover={buttonHoverStyle}>Ver curriculum</Button></Link>
                 </Flex>
-                <Flex alignItems={{base:"normal", md:"center"}} direction={{base:"column", md:"row"}}>
-                    <Box my={"5px"}>
-                        <Text sx={miniHeaderStyle}>Email</Text>
-                        <Text sx={miniTextStyle}>leanejemplo@gmail.com</Text>
-                    </Box>
-                    <Divider display={{base:"none", md:"block"}} orientation="vertical" h={"40px"} mx={{base:"10px", md:"20px"}}></Divider>
-                    <Box my={"5px"}>
-                        <Text sx={miniHeaderStyle}>Teléfono</Text>
-                        <Text sx={miniTextStyle}>+54 9 261 6887381</Text>
-                    </Box>
-                    <Divider display={{base:"none", md:"block"}} orientation="vertical" h={"40px"} mx={{base:"10px", md:"20px"}}></Divider>
-                    <Box my={"5px"}>
-                        <Text sx={miniHeaderStyle}>Ubicación</Text>
-                        <Text sx={miniTextStyle}>Mendoza, Agentina</Text>
-                    </Box>
+                <Flex alignItems={"center"} justifyContent={"space-around"}>
+                    <Flex alignItems={{base:"normal", md:"center"}} direction={{base:"column", md:"row"}}>
+                        <Box my={"5px"}>
+                            <Text sx={miniHeaderStyle}>Email</Text>
+                            <Text sx={miniTextStyle}>leanejemplo@gmail.com</Text>
+                        </Box>
+                        <Divider display={{base:"none", md:"block"}} orientation="vertical" h={"40px"} mx={{base:"10px", md:"20px"}}></Divider>
+                        <Box my={"5px"}>
+                            <Text sx={miniHeaderStyle}>Teléfono</Text>
+                            <Text sx={miniTextStyle}>+54 9 261 6887381</Text>
+                        </Box>
+                        <Divider display={{base:"none", md:"block"}} orientation="vertical" h={"40px"} mx={{base:"10px", md:"20px"}}></Divider>
+                        <Box my={"5px"}>
+                            <Text sx={miniHeaderStyle}>Ubicación</Text>
+                            <Text sx={miniTextStyle}>Mendoza, Agentina</Text>
+                        </Box>
+                    </Flex>
+                    <Link href="https://youtu.be/0CdMqJ9Lidg?t=4)" position={{base:"static",md:"absolute"}} right={{base:"10vw",xl:"20vw"}} top={{base:"150px",lg:"30vh"}}>
+                        <Image src={videoAboutMe} alt="Conoce más sobre mí" boxSize={{base:"100px", md:"100px",lg:"120px"}} _hover={{filter: "brightness(150%)"}}></Image></Link>
                 </Flex>
             </Flex>
-            <Link display={{base:"none", sm:"block"}} href="https://youtu.be/0CdMqJ9Lidg?t=4)" position={{base:"static",lg:"absolute"}} right={{base:"0vw", lg:"10vw",xl:"20vw"}} top={{base:"0px",lg:"30vh"}}>
-                <Image src={videoAboutMe} alt="Conoce más sobre mí" boxSize={{base:"50px", md:"100px",lg:"120px"}} _hover={{filter: "brightness(150%)"}}></Image></Link>
         </Flex>
     )
 }

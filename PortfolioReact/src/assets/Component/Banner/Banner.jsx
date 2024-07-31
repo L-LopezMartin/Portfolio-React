@@ -6,7 +6,7 @@ function Banner() {
     const starStyle = {w:{md:"40px", lg:"35px", xl:"50px"}, display:{base:"none", md:"block"}}
   
     return (
-        <Flex as={'section'} w={"100vw"} justifyContent={"space-around"} alignItems={"center"} bg={"rgb(232, 106, 66)"} px={"5vw"} direction={{base:"column", md:"row"}} py={"20px"}>
+        <Flex as={'section'} w={"100vw"} justifyContent={"space-around"} alignItems={"center"} bg={"rgb(232, 106, 66)"} px={"5vw"} direction={{base:"column", md:"row"}} py={{base:"20px", md:"40px"}}>
             <Text sx={textStyle}>Diseño Web</Text>
             <Image src={dividerStar} alt='Star divider' sx={starStyle}></Image>
             <Text sx={textStyle}>Investigación de usuario</Text>

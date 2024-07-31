@@ -14,8 +14,8 @@ function Footer(){
 
     const formButtonStyle = {bgColor: "transparent", color:"rgb(232, 106, 66)", w:"10%",h:"100%", fontSize:"24px"}
 
-    const titleStyle = {fontFamily:"IBM Plex Sans", fontWeight:"semibold", fontSize:"28px"}
-    const textStyle = {fontFamily:"IBM Plex Sans", fontSize:"16px", color:"rgb(193, 193, 194)"}
+    const titleStyle = {fontFamily:"IBM Plex Sans", fontWeight:"semibold", fontSize:{base:"20px", md:"28px"}}
+    const textStyle = {fontFamily:"IBM Plex Sans", fontSize:{base:"12px", md:"16px"}, color:"rgb(193, 193, 194)"}
     const textHoverStyle = {color:"rgb(230, 230, 320)"}
 
     const snsStyle = {w:"40px", h:"40px", m:"10px", border:"2px", borderRadius:"100%", padding:"5px", borderColor:"grey"}
@@ -35,12 +35,12 @@ function Footer(){
 
     return(
         <Flex as={'footer'} direction={'column'} alignItems={'center'} justifyContent={'space-around'} w={'100vw'} px={'10vw'} bg={"rgb(23, 22, 26)"} py={"20px"}>
-            <Flex justifyContent={'space-between'} w={"100%"}>
-                <Flex direction={'column'} w={"33%"}>
+            <Flex direction={{base:"column", lg:'row'}} justifyContent={'space-between'} w={"100%"}>
+                <Flex direction={"column"} w={{base:"100%", lg:"33%"}}>
                     <Text my={"10px"} sx={titleStyle}>Suscríbete al newsletter para estar al tanto de las noticias</Text>
                     <form onSubmit={suscribe}>
                         <FormControl display={"flex"} justifyContent={"space-between"}>
-                            <Input id="emailFooter"type="email" border={"2px"} borderColor={"transparent"} placeholder="tu correo electrónico" w={"86%"} color={"rgb(230,230,230)"} _focusVisible={{border:"2px",borderColor:"rgb(232, 106, 66)"}}></Input>
+                            <Input id="emailFooter" type="email" fontSize={{base:"12px", md:"16px"}} border={"2px"} borderColor={"transparent"} placeholder="tu correo electrónico" w={"86%"} color={"rgb(230,230,230)"} _focusVisible={{border:"2px",borderColor:"rgb(232, 106, 66)"}}></Input>
                             <Button type="submit" sx={formButtonStyle}>
                                 <ArrowForwardIcon h={"40px"} id="arrow"></ArrowForwardIcon>
                             </Button>
@@ -49,22 +49,24 @@ function Footer(){
                     </form>
                     <Divider my={"5px"} borderWidth={"1.5px"} borderRadius={"7px"}/>
                     <Flex justifyContent={'center'} my={"30px"} wrap={"wrap"}>
-                        <Link href="https://www.upwork.com/" mx={"30px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingUpwork} alt="UpWorkRating"></Image></Link>
-                        <Link href="https://dribbble.com/" mx={"30px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingDribble} alt="Dribble"></Image></Link>
+                        <Link href="https://www.upwork.com/" w={"50%"} px={"5px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingUpwork} alt="UpWorkRating"></Image></Link>
+                        <Link href="https://dribbble.com/" w={"50%"} px={"5px"} _hover={{filter: "brightness(150%)"}}><Image src={ratingDribble} alt="Dribble"></Image></Link>
                     </Flex>
                 </Flex>
-                <Flex direction={'column'} w={"33%"} pl={"15%"}>
-                    <Text href="https://github.com/L-LopezMartin" my={"10px"} sx={titleStyle}>Links útiles</Text>
-                    <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Proyectos</Link>
-                    <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Servicios</Link>
-                    <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Contactos</Link>
-                    <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Blog</Link>
-                </Flex>
-                <Flex direction={'column'} w={"33%"} pl={"15%"}>
-                    <Text my={"10px"} sx={titleStyle}>Consultas</Text>
-                    <Text my={"5px"} sx={textStyle}>leanejemplo@gmail.com.ar</Text>
-                    <Text my={"5px"} sx={textStyle}>+54 9 261 6887381</Text>
-                    <Text my={"5px"} sx={textStyle}>sky_pe/leandro</Text>
+                <Flex w={{base:"100%", lg:"66%"}}>
+                    <Flex direction={'column'} w={"50%"} pb={"50px"} pl={{base:"0px", lg:"15%"}}>
+                        <Text href="https://github.com/L-LopezMartin" my={"10px"} sx={titleStyle}>Links útiles</Text>
+                        <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Proyectos</Link>
+                        <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Servicios</Link>
+                        <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Contactos</Link>
+                        <Link href="https://github.com/L-LopezMartin" my={"5px"} sx={textStyle} _hover={textHoverStyle}>Blog</Link>
+                    </Flex>
+                    <Flex direction={'column'} w={"50%"} pb={"50px"} pl={{base:"0px", lg:"15%"}}>
+                        <Text my={"10px"} sx={titleStyle}>Consultas</Text>
+                        <Text my={"5px"} sx={textStyle}>leanejemplo@gmail.com.ar</Text>
+                        <Text my={"5px"} sx={textStyle}>+54 9 261 6887381</Text>
+                        <Text my={"5px"} sx={textStyle}>sky_pe/leandro</Text>
+                    </Flex>
                 </Flex>
             </Flex>
             <Flex justifyContent={'space-between'} w={"100%"} alignItems={"center"}>
@@ -86,15 +88,21 @@ function Footer(){
 
             <Divider my={"10px"} borderWidth={"1px"} borderRadius={"5px"}/>
 
+            <Flex display={{base:"flex", md:"none"}}>
+                <Link href="https://dribbble.com/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoDb} alt="Dribble Logo"></Image></Link>
+                <Link href="https://www.instagram.com/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoIg} alt="Instagram Logo"></Image></Link>
+                <Link href="https://www.behance.net/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoBh} alt="Behance Logo"></Image></Link>
+                <Link href="https://www.upwork.com/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoUp} alt="UpWork Logo"></Image></Link>
+            </Flex>
             <Flex justifyContent={'space-between'} w={"100%"} alignItems={"center"} my={"20px"}>
-                <Text color={"grey"}>© 2024 Allfolio - All right reserved</Text>
-                <Flex>
+                <Text color={"grey"} textAlign={"left"}>© 2024 Allfolio - All right reserved</Text>
+                <Flex display={{base:"none", md:"flex"}}>
                     <Link href="https://dribbble.com/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoDb} alt="Dribble Logo"></Image></Link>
                     <Link href="https://www.instagram.com/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoIg} alt="Instagram Logo"></Image></Link>
                     <Link href="https://www.behance.net/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoBh} alt="Behance Logo"></Image></Link>
                     <Link href="https://www.upwork.com/" sx={snsStyle} _hover={snsHoverStyle}><Image src={logoUp} alt="UpWork Logo"></Image></Link>
                 </Flex>
-                <Link href="https://youtu.be/0CdMqJ9Lidg?t=4)" color={"grey"}  _hover={textHoverStyle}>Política de privacidad</Link>
+                <Link href="https://youtu.be/0CdMqJ9Lidg?t=4)" color={"grey"}  _hover={textHoverStyle} textAlign={"right"}>Política de privacidad</Link>
             </Flex>
         </Flex>
     )
