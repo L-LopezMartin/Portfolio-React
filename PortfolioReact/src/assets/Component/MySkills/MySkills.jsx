@@ -10,7 +10,7 @@ import logoSQL from "./img/SQL.png"
 function MySkills(){
     const logoTextStyle = {fontWeight:"bold", fontFamily:"IBM Plex Sans", fontSize:{base:"18px", md:"24px"}, color:"rgb(230, 230, 230)"}
     return(
-        <Flex as={'section'} w={"100vw"} px={"10vw"} py={"30px"} direction={"column"} bg={"rgb(23, 22, 26)"} pb={"40px"}>
+        <Flex as={'section'} w={"100vw"} px={"10vw"} py={"50px"} direction={"column"} bg={"rgb(23, 22, 26)"} pb={"40px"}>
             <Heading fontFamily={"Playfair Display"} fontWeight={"bold"} fontSize={{base:"36px", md:"48px"}} color={"rgb(230, 230, 230)"}>Mis habilidades</Heading>
             <Flex justify={"center"} wrap={"wrap"} pt={"20px"}>
                 <Flex direction={"column"} alignItems={"center"} px={"20px"} w={{base:"50%", lg:"33%", '2xl':"16%"}}>
