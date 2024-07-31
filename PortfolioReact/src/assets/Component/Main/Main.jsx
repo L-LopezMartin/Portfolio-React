@@ -16,7 +16,7 @@ function Main(){
             <MySkills></MySkills>
             <HowIWork></HowIWork>
             <ProjectsMade></ProjectsMade>
-            {/* <ClientReviews></ClientReviews> */}
+            <ClientReviews></ClientReviews>
             <ContactUs></ContactUs>
         </main>
     )
