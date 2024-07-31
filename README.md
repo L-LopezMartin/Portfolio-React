@@ -12,7 +12,6 @@
   <li>
     <a href="https://portfolio-react-weld.vercel.app/"> Página resultante </a>
   </li>
-<ul>
   <li>
     <a href="https://www.behance.net/gallery/197657939/UIUX-Portfolio-Website-Landing-Page-Design-Figma?tracking_source=search_projects|portfolio+landing+page&l=75"> Página original </a>
   </li>
